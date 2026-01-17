@@ -1,10 +1,13 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5001/api';
+// Determine API base URL based on environment
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://lectureschedulingmodel.onrender.com/api'
+  : 'http://localhost:5001/api';
 
 // Create axios instance with default config
 const api = axios.create({
-  baseURL: 'https://lectureschedulingmodel.onrender.com',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
