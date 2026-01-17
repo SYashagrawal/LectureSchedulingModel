@@ -29,6 +29,7 @@
    - **Region**: Choose closest to you
    - **Branch**: main
    - **Runtime**: Node
+   - **Root Directory**: `server`
    - **Build Command**: `npm install`
    - **Start Command**: `npm start`
    - **Instance Type**: Free
